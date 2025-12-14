@@ -1,0 +1,47 @@
+{
+  "guildId": "1449678768577839156",
+  "channelId": "1449678769714630739",
+  "welcomeMessage": {
+    "content": "**${newMember}** vient débarquer sur le Perchoir ! Offrez-lui un café !",
+    "deleteIfUserQuit": true,
+    "unique": true,
+    "button": {
+      "label": "Offrir un café !",
+      "iconId": "1449781153644150835"
+    }
+  },
+  "interaction":
+  {
+    "message": 
+    {
+      "invalid": "Ce message d'accueil n'est plus valide.",
+      "self": "Vous ne pouvez pas vous offrir un café à vous-même ! 😄",
+      "gifted": "Café offert ! ☕",
+      "success": "**${fastClicker}** offre un café à **${newMember}** qui vient d'arriver sur le Perchoir !"
+    }
+  },
+  "command":
+  {
+    "commandHandler": 
+    {
+      "unknown": "Commande inconnue.",
+      "noadmin": "❌ Seuls les administrateurs peuvent utiliser cette commande.",
+      "failed": "Une erreur est survenue lors de l'exécution de la commande."
+    },
+    "whoCoffed":
+    {
+      "nocoffee": "☕ Personne n'a encore offert de café à ${member}.",
+      
+      "color": "#8B4513",
+      "title": "☕ Informations Café",
+      "description": "${coffed} a offert un café à ${member} !"
+    },
+    "coffeeRank":
+    {
+      "nocoffee": "☕ Aucun café n'a encore été offert !",
+
+      "color": "#8B4513",
+      "title": "☕ Classement des Cafés Offerts"
+    }
+  }
+}

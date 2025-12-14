@@ -1,0 +1,19 @@
+*
+
+# Npm / Bun
+!bun.lock
+!package.json
+
+# Def
+!.env-def
+
+# Discord client config and command deployer
+!clientconfig.json
+!deploy-commands.js
+
+# Git
+!.gitignore
+
+# Source Code
+!src/
+!src/**/*
