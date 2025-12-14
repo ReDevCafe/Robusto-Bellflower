@@ -17,7 +17,7 @@ export class WhoCoffedCommand extends BaseCommand
 
     if (!userData || userData.coffed === "0") 
     {
-      await interaction.reply({content: config.command.whoCoffed.content.nocoffee.replace('${member}', `<@${targetUser.id}>`), flags: MessageFlags.Ephemeral });
+      await interaction.reply({content: config.command.whoCoffed.nocoffee.replace('${member}', `<@${targetUser.id}>`), flags: MessageFlags.Ephemeral });
       return;
     }
 
