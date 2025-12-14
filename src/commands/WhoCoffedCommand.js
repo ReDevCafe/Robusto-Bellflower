@@ -25,12 +25,12 @@ export class WhoCoffedCommand extends BaseCommand
       .setColor(config.command.whoCoffed.color)
       .setTitle(config.command.whoCoffed.title)
       .setDescription(config.command.whoCoffed.description
-                              .replace('${coffed}', `<@${userData.coffed}>`)
-                              .replace('${member}', `<@${targetUser.id}>`)
+                        .replace('${coffed}', `<@${userData.coffed}>`)
+                        .replace('${member}', `<@${targetUser.id}>`)
       )
       .addFields(
-        { name: 'Bénéficiaire', value: `<@${targetUser.id}>`, inline: true },
-        { name: 'Donneur', value: `<@${userData.coffed}>`, inline: true }
+        { name: config.command.whoCoffed.fields.beneficiary, value: `<@${targetUser.id}>`, inline: true },
+        { name: config.command.whoCoffed.fields.donor, value: `<@${userData.coffed}>`, inline: true }
       )
       .setTimestamp();
 

@@ -107,8 +107,10 @@ client.on(Events.InteractionCreate, async (interaction) =>
     await interaction.message.delete();
     activeWelcomeCache.delete(messageId);
     
-    const successContent = config.interaction.message.success.replace('${fastClicker}', `<@${fastClicker.username}>`).replace('${newMember}', `<@${newMemberId}>`);
-    await interaction.channel.send({ content: successContent });
+    await interaction.channel.send({ content: config.interaction.message.success
+                                      .replace('${fastClicker}', `<@${fastClicker.username}>`)
+                                      .replace('${newMember}', `<@${newMemberId}>`) 
+    });
     await database.incrementCoffeeCount(fastClicker.id, newMemberId);
     await interaction.reply({ content: config.interaction.message.gifted, flags: MessageFlags.Ephemeral });
   }

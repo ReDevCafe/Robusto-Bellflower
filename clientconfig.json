@@ -34,7 +34,12 @@
       
       "color": "#8B4513",
       "title": "☕ Informations Café",
-      "description": "${coffed} a offert un café à ${member} !"
+      "description": "${coffed} a offert un café à ${member} !",
+      "fields": 
+      {
+        "beneficiary": "Bénéficiaire",
+        "donor": "Donneur"
+      }
     },
     "coffeeRank":
     {
