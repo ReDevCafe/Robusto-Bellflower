@@ -16,7 +16,6 @@
     {
       "invalid": "Ce message d'accueil n'est plus valide.",
       "self": "Vous ne pouvez pas vous offrir un café à vous-même ! 😄",
-      "gifted": "Café offert ! ☕",
       "success": "**${fastClicker}** offre un café à **${newMember}** qui vient d'arriver sur le Perchoir !"
     }
   },

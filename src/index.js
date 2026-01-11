@@ -108,11 +108,10 @@ client.on(Events.InteractionCreate, async (interaction) =>
     activeWelcomeCache.delete(messageId);
     
     await interaction.channel.send({ content: config.interaction.message.success
-                                      .replace('${fastClicker}', `<@${fastClicker.username}>`)
+                                      .replace('${fastClicker}', `${fastClicker.username}`)
                                       .replace('${newMember}', `<@${newMemberId}>`) 
     });
     await database.incrementCoffeeCount(fastClicker.id, newMemberId);
-    await interaction.reply({ content: config.interaction.message.gifted, flags: MessageFlags.Ephemeral });
   }
   if(interaction.isChatInputCommand()) 
   {
